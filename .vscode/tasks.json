@@ -1,0 +1,65 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Build and Run",
+      "type": "shell",
+      "group": "build",
+      "command": "python",
+      "args": [
+        "build.py",
+        "&&",
+        "python",
+        "run.py",
+      ],
+      "presentation": {
+        "echo": false,
+        "reveal": "always",
+        "focus": true,
+        "panel": "shared",
+        "showReuseMessage": true,
+        "clear": true
+      }
+    },
+    {
+      "label": "Build",
+      "type": "shell",
+      "group": {
+        "kind": "build",
+        "isDefault": true,
+      },
+      "command": "python",
+      "args": [
+        "build.py",
+      ],
+      "presentation": {
+        "echo": false,
+        "reveal": "always",
+        "focus": true,
+        "panel": "shared",
+        "showReuseMessage": true,
+        "clear": true
+      }
+    },
+    {
+      "label": "Run",
+      "type": "shell",
+      "group": {
+        "kind": "test",
+        "isDefault": true,
+      },
+      "command": "python",
+      "args": [
+        "run.py",
+      ],
+      "presentation": {
+        "echo": false,
+        "reveal": "always",
+        "focus": true,
+        "panel": "shared",
+        "showReuseMessage": true,
+        "clear": true
+      }
+    },
+  ]
+}
